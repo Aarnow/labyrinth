@@ -5,34 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 4f, curSpeed;
-    private Vector3 movement = Vector3.zero; //Define Vector3 null (x,y,z --> 0,0,0)
+    private float speed = 4f, rot=80f, curSpeed;
 
-    //Use method "update" for update every frame
-    //for physical operation prefer FixedUpdate
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            movement = Vector3.forward;
-        }
-
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            movement = Vector3.back;
-        }
-
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            movement = Vector3.zero;
-            transform.Rotate(Vector3.up * -100 * Time.fixedDeltaTime);
-        }
-
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            movement = Vector3.zero;
-            transform.Rotate(Vector3.up * 100 * Time.fixedDeltaTime);
-        }
+        
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -43,8 +20,12 @@ public class PlayerController : MonoBehaviour
             curSpeed = speed;
         }
 
-        //Time.deltaTime/fixedDeltaTime --> standardize movement speed between different users
-        transform.Translate(movement * curSpeed * Time.fixedDeltaTime);
-        movement = Vector3.zero; //reset
+        transform.Rotate(Vector3.up * rot * Time.fixedDeltaTime * Input.GetAxis("Horizontal"));
+
+        float goForward = Input.GetAxis("Vertical");
+        if(goForward > 0)//Never back ! 
+        {
+            transform.Translate(Vector3.forward * curSpeed * Time.fixedDeltaTime * Input.GetAxis("Vertical"));
+        }
     }
 }
