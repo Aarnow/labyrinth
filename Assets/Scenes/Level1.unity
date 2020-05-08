@@ -3611,6 +3611,7 @@ GameObject:
   - component: {fileID: 2085177613}
   - component: {fileID: 2085177612}
   - component: {fileID: 2085177611}
+  - component: {fileID: 2085177614}
   m_Layer: 0
   m_Name: DoorExitPoint
   m_TagString: Untagged
@@ -3658,6 +3659,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2085177614
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085177610}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2564ce58e6bf2784886ece14eb1cbb48, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2088140769
 PrefabInstance:
   m_ObjectHideFlags: 0
