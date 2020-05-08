@@ -9,12 +9,7 @@ public class DoorScript : MonoBehaviour
     {   
         if(other.tag == "Player")
         {
-            Debug.Log(other.name + " inside trigger");
+            GetComponent<Animator>().enabled = true;
         }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-
     }
 }
