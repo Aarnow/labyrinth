@@ -18,5 +18,19 @@ public class UIScript : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
+
+    public void Continue()
+    {
+        int levelToLoad = PlayerPrefs.GetInt("LevelToLoad");
+
+        if (levelToLoad > 1)
+        {
+            SceneManager.LoadScene(levelToLoad);
+        }
+        else
+        {
+            SceneManager.LoadScene("Level1");
+        }
+    }
    
 }
