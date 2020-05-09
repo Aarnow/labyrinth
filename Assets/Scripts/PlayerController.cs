@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 4f, rot=80f, curSpeed;
+    private float speed = 4f, rot=160f, curSpeed;
 
     [SerializeField]
     GameObject ImgGameOver; 
