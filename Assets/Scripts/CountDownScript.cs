@@ -25,6 +25,6 @@ public class CountDownScript : MonoBehaviour
             TxtCountDown.text = "TimeLeft : " + startCountDown;
         }
 
-        Debug.Log("GAME OVER");
+        GameObject.Find("Player").GetComponent<PlayerController>().GameOver();
     }
 }
