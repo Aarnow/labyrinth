@@ -16,6 +16,13 @@ public class AfterBurnerScript : MonoBehaviour
         if (autoIndex)
         {
             LevelToLoad = SceneManager.GetActiveScene().buildIndex + 1;
+            if(!(LevelToLoad < SceneManager.sceneCountInBuildSettings))
+            {
+                LevelToLoad = 0; //end game --> return menu
+            }
+            //Debug.Log("Length build setting = " + SceneManager.sceneCountInBuildSettings);
+            //Debug.Log("Next index = " + (SceneManager.GetActiveScene().buildIndex + 1));
+
         }
     }
     private void OnCollisionEnter(Collision collision)

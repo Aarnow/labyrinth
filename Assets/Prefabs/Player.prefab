@@ -306,6 +306,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  rot: 80
+  rot: 160
   curSpeed: 0
   ImgGameOver: {fileID: 0}
