@@ -23,6 +23,7 @@ public class AfterBurnerScript : MonoBehaviour
         if(collision.collider.tag == "Player")
         {
             SceneManager.LoadScene(LevelToLoad);
+            PlayerPrefs.SetInt("LevelToLoad", LevelToLoad);
         }
     }
 }
